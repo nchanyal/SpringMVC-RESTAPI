@@ -8,7 +8,7 @@ const outputPath = path.resolve(__dirname, 'dist');
 module.exports = {
   mode: 'development',
   entry: {
-    app: require.resolve('./src/index'),
+    app: require.resolve('./src-webpack/index'),
   },
   resolve: {
     extensions: ['.ts', '.js'],
@@ -42,7 +42,7 @@ module.exports = {
       }
     ]}),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src-webpack/index.html'
     })
   ],
   output: {
