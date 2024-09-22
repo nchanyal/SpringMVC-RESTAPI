@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 
 
@@ -45,6 +47,12 @@ public class RunController {
     @PostMapping("/runs")
     public void create(@RequestBody Run run) {
         runRepository.create(run);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("runs/{id}")
+    public void update(@RequestBody Run run, @PathVariable Integer id) {
+        runRepository.update(run, id);
     }
     
     
