@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -50,10 +51,15 @@ public class RunController {
     }
 
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    @PutMapping("runs/{id}")
+    @PutMapping("/runs/{id}")
     public void update(@RequestBody Run run, @PathVariable Integer id) {
         runRepository.update(run, id);
     }
-    
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/runs/{id}")
+    public void delete(@PathVariable Integer id) {
+        runRepository.delete(id);
+    }
     
 }
