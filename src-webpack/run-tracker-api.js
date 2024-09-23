@@ -1,30 +1,30 @@
 export const apiDefinition = {
   "openapi": "3.0.3",
   "info": {
-    "title": "Runnerz",
+    "title": "Runnerz API",
     "version": "1.0.0",
     "contact": {}
   },
   "servers": [
     {
-      "url": "http://localhost"
+      "url": "http://localhost:8080"
     }
   ],
   "paths": {
     "/api/runs": {
       "get": {
-        "summary": "findAll",
-        "description": "findAll",
+        "summary": "Get all the runs.",
+        "description": "Return all the runs stored in the database.",
         "operationId": "findall",
         "responses": {
           "200": {
-            "description": ""
+            "description": "Indicates a successful response from the server."
           }
         }
       },
       "post": {
-        "summary": "create",
-        "description": "create",
+        "summary": "Create a new run.",
+        "description": "Creates a new run and stores it in the database.",
         "operationId": "create",
         "requestBody": {
           "content": {
@@ -74,28 +74,26 @@ export const apiDefinition = {
           }
         },
         "responses": {
-          "200": {
-            "description": ""
+          "201": {
+            "description": "Indicates that the request was successfully processed and that a new resource was created."
           }
         }
       }
     },
-    "/api/runs/2": {
+    "/api/runs/{id}": {
       "get": {
-        "summary": "findById",
-        "description": "findById",
+        "summary": "Get a run by id.",
+        "description": "Returns a run whose id matches the given id.",
         "operationId": "findbyid",
         "responses": {
           "200": {
-            "description": ""
+            "description": "Indicates a successful response from the server."
           }
         }
-      }
-    },
-    "/api/runs/3": {
+      },
       "put": {
-        "summary": "update",
-        "description": "update",
+        "summary": "Update a run by id.",
+        "description": "Replaces all the values in a run whose id matches the given id.",
         "operationId": "update",
         "requestBody": {
           "content": {
@@ -145,18 +143,18 @@ export const apiDefinition = {
           }
         },
         "responses": {
-          "200": {
-            "description": ""
+          "204": {
+            "description": "Indicates that the request was successfully processed, but no content is being returned."
           }
         }
       },
       "delete": {
-        "summary": "delete",
-        "description": "delete",
+        "summary": "Delete a run by id.",
+        "description": "Removes a run in the database whose id matches the given id.",
         "operationId": "delete",
         "responses": {
-          "200": {
-            "description": ""
+          "204": {
+            "description": "Indicates that the request was successfully processed, but no content is being returned."
           }
         }
       }
