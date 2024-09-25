@@ -21,4 +21,4 @@ The UI provided by Swagger gives users a visual representation of carrying out t
 
 ## Website Look:
 
-![preview](.src-webpack/assets/swagger-ui.png)
+![preview](./src-webpack/assets/swagger-ui.png)
