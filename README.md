@@ -2,9 +2,9 @@
 
 This is a REST API that takes HTTP requests related to creating, reading, updating, and deleting runs. 
 
-The UI provided by Swagger gives users a visual representation of carrying out CRUD operations. 
+The UI provided by Swagger gives users a visual representation of carrying out the CRUD operations. 
 
-## The purpose of this project is to learn and practice concepts related to:
+### The purpose of this project is to learn and practice concepts related to:
  - Java
  - Spring Boot
  - Building a REST API
@@ -13,7 +13,7 @@ The UI provided by Swagger gives users a visual representation of carrying out C
  - Spring MVC
  - Spring Boot Annotations (@Component / RestController / Repository)
  - REST API Testing (Postman)
- - Dependency injection
+ - Dependency Injection
  - Data Validation
  - JDBC Client
  - Docker Compose & PostgreSQL
